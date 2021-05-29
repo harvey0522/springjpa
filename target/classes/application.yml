@@ -1,0 +1,36 @@
+logging:
+  level:
+    root: info
+    org.springframework.web: "info"
+    org.apache.ibatis: "debug"
+    org.mybatis: "debug"
+  file:
+    path: "/springboot/log"
+
+spring:
+  datasource:
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/dbdev
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat,wall
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+person:
+  first_name: Mike
+  age: 18
+  phone: 18888
+
+#spring:
+#  profiles:
+#    active: dev

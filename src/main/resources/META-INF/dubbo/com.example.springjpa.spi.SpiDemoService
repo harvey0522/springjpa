@@ -1,0 +1,3 @@
+s1=com.example.springjpa.spi.SpiServiceImpl
+s1=com.example.springjpa.spi.SpiService3Impl
+s2=com.example.springjpa.spi.SpiService2Impl

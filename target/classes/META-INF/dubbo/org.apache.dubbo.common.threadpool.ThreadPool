@@ -1,0 +1,2 @@
+mypool=com.example.springjpa.spi.MyDubboThreadPool
+
