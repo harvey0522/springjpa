@@ -18,6 +18,8 @@ public class Product implements Serializable {
 
     private String name;
 
+    private byte state;
+
     public Integer getId() {
         return id;
     }
@@ -49,6 +51,14 @@ public class Product implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+    /*public byte getState() {
+        return state;
+    }
+
+    public void setState(byte state) {
+        this.state = state;
+    }*/
 
     @Override
     public String toString() {
