@@ -1,3 +1,6 @@
+server:
+   port: 9091
+
 logging:
   level:
     root: info
@@ -20,6 +23,9 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  application:
+    name: myspring
+
 management:
   endpoints:
     web:
@@ -30,7 +36,12 @@ person:
   first_name: Mike
   age: 18
   phone: 18888
-
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8765/eureka/
+  instance:
+    prefer-ip-address: true
 #spring:
 #  profiles:
 #    active: dev
