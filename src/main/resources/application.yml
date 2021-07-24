@@ -45,3 +45,9 @@ eureka:
 #spring:
 #  profiles:
 #    active: dev
+rocketmq:
+  name-server: 192.168.0.104:9876
+  topic: mytopic1
+  producer:
+    send-message-timeout: 10000
+    group: group-lss
