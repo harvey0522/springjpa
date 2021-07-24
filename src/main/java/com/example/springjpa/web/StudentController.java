@@ -62,5 +62,17 @@ public class StudentController {
         return "ok";
     }
 
+    @RequestMapping(value = "/mvcget",method =RequestMethod.GET )
+    public String get(String param){
+        log.info("00000.{}",param);
+        return "2222..."+param;
+    }
+
+    @RequestMapping(value = "/mvcpost",method =RequestMethod.POST )
+    public String mvcpost(String param){
+        log.info("00000.{}",param);
+        return "44444..."+param;
+    }
+
 
 }

@@ -11,6 +11,7 @@ public class MyListern implements ApplicationListener {
     Logger log= LoggerFactory.getLogger(MyListern.class);
     @Override
     public void onApplicationEvent(ApplicationEvent event) {
+
         log.info("我是MyListern-->>>>>>>>{}",event.getSource().toString());
     }
 }

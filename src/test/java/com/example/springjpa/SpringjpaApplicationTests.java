@@ -3,32 +3,40 @@ package com.example.springjpa;
 import com.alibaba.fastjson.JSON;
 import com.example.springjpa.entry.Student;
 import com.example.springjpa.jpa.StudentJpa;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
 
 @SpringBootTest
-class SpringjpaApplicationTests {
+@Slf4j
+public class SpringjpaApplicationTests {
 
-	@Autowired
-	StudentJpa studentJpa;
-	@Test
+	/*@Autowired
+	StudentJpa studentJpa;*/
+	/*@Resource
+	private RocketMQTemplate rocketMQTemplate;*/
+
+	/*@Test
 	void contextLoads() {
+		log.info("-------{}",rocketMQTemplate.toString());
+		rocketMQTemplate.convertAndSend("tag1","hhhhhhhhhh");
+	}*/
 
-	}
-
-	@Test
+	/*@Test
 	void test1(){
 
 		List<Student> studentOptional=studentJpa.findAll();
 
 		System.out.println(JSON.toJSON(studentOptional));
-	}
+	}*/
 
 	@Test
 	void add(){
@@ -44,7 +52,7 @@ class SpringjpaApplicationTests {
 				students.setPhone(11 + i);
 				students.setNumber("no" + i);
 				list.add(students);
-				studentJpa.saveAll(list);
+				//studentJpa.saveAll(list);
 			}
 
 		System.out.println("------->>>>"+(System.currentTimeMillis()-time1));
