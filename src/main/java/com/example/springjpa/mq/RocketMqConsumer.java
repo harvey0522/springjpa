@@ -19,7 +19,7 @@ public class RocketMqConsumer {
     public static void main(String[] args) throws UnsupportedEncodingException, InterruptedException, RemotingException, MQClientException, MQBrokerException {
         DefaultMQPushConsumer pushConsumer=new DefaultMQPushConsumer("myconsumer");
         pushConsumer.setNamesrvAddr("192.168.0.104:9876");
-        pushConsumer.subscribe("mytopic1","*");
+        pushConsumer.subscribe("myonly","*");
 
         pushConsumer.setMessageListener(new MessageListenerConcurrently(){
 
