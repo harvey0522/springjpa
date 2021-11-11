@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 /**
  * Created by annis.zhang on 12/30/2020.
  */
-@Configuration
+//@Configuration
 public class DruidPool {
 
     @ConfigurationProperties(prefix = "spring.datasource")

@@ -9,7 +9,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @SpringBootApplication
 @EnableDubbo
 //@EnableAspectJAutoProxy
-//@ComponentScan({"com.example.springjpa"})
+@ComponentScan({"com.example.springjpa"})
 //@NacosPropertySource(dataId = "example", autoRefreshed = true)
 public class SpringjpaApplication {
 

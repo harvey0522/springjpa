@@ -81,10 +81,35 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
+		<!--<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>-->
+
 		<dependency>
 			<groupId>org.apache.rocketmq</groupId>
 			<artifactId>rocketmq-spring-boot-starter</artifactId>
 			<version>2.1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.shardingsphere</groupId>
+			<artifactId>sharding-jdbc-core</artifactId>
+			<version>4.0.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.shardingsphere</groupId>
+					<artifactId>shardingsphere-sql-parser-postgresql</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.shardingsphere</groupId>
+					<artifactId>shardingsphere-sql-parser-oracle</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.shardingsphere</groupId>
+					<artifactId>shardingsphere-sql-parser-sqlserver</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @DubboService
@@ -20,16 +21,17 @@ public class ProductService implements ProductInter {
     @Autowired
     ProductJpa productJpa;
 
-    @Autowired
-    DruidDataSource druidDatasource;
+    /*@Resource
+    DruidDataSource druidDatasource;*/
 
 
     @Transactional
      public List<Product> query(Product product){
-         Example example= Example.of(product);
+
+         Example example=Example.of(new Product());
          log.info("条件:{}",example);
         try {
-           return productJpa.findAll(example);
+           return productJpa.findAll();
         }catch (Exception exception){
             log.error(">>>>>",exception);
         }
@@ -48,7 +50,7 @@ public class ProductService implements ProductInter {
 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public  int delete(Integer id){
-        log.info("druidDatasource:---->>>>{}",druidDatasource.toString());
+        //log.info("druidDatasource:---->>>>{}",druidDatasource.toString());
         log.info("条件:{}",id);
         try {
             productJpa.deleteById(id);

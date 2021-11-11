@@ -12,9 +12,10 @@ logging:
 
 spring:
   datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://192.168.0.104:3306/dev
+    username: app_test
+    password: AACt79cehg12anfkd
+    #url: jdbc:mysql://192.168.0.106:3306/dev
+    url: jdbc:mysql://test01-secooC2CDB.master.com:3306/secooC2CDB
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     filters: stat,wall
